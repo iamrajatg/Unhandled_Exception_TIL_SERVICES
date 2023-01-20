@@ -6,6 +6,7 @@ import org.apache.commons.codec.DecoderException;
 import org.apache.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import com.wallet.unhandled_exception.response.Response;
 import foundation.identity.jsonld.JsonLDException;
 import lombok.NonNull;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/generate")
 public class IssueDID {

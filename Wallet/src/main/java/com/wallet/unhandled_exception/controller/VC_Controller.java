@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.commons.codec.DecoderException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import com.wallet.unhandled_exception.service.CallDidDoc;
 import foundation.identity.jsonld.JsonLDException;
 import lombok.NonNull;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/vc")
 public class VC_Controller {
