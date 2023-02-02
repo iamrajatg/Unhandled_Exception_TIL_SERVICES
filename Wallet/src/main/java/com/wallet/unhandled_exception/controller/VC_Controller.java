@@ -41,4 +41,18 @@ public class VC_Controller {
 //		finalResponse = CallDidDoc.getDidDoc();
 		return VC_Issue_Verify.verifyVC(request);
 	}
+	
+	@PostMapping(value = "/presentation", consumes = {MediaType.APPLICATION_JSON_VALUE},
+	        produces = {MediaType.APPLICATION_JSON_VALUE})
+	public static String createVP(@RequestBody @NonNull String request) throws DecoderException, NullExceptions, IOException, Inaccurate, JsonLDException 
+	{
+		return VC_Issue_Verify.createVP(request);
+	}
+	
+	@PostMapping(value = "/presentation/verify", consumes = {MediaType.APPLICATION_JSON_VALUE},
+	        produces = {MediaType.APPLICATION_JSON_VALUE})
+	public static VerifyResponse verifyVP(@RequestBody @NonNull String request) throws DecoderException, NullExceptions, IOException, Inaccurate, JsonLDException 
+	{
+		return VC_Issue_Verify.verifyVP(request);
+	}
 }

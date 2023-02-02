@@ -17,6 +17,12 @@ public class FinalResponse implements Serializable{
 	@JsonProperty("did_key")
 	private String did_key;
 	
+	@JsonProperty("publicKey")
+	private String publicKey;
+	
+	@JsonProperty("privateKey")
+	private String privateKey;
+	
 
 	@JsonProperty("did_web")
 	private String did_web;
@@ -33,11 +39,13 @@ public class FinalResponse implements Serializable{
 		super();
 	}	
 	
-	public FinalResponse(String did_key, String did_web, DID_Doc did_document) {
+	public FinalResponse(String did_key, String did_web, DID_Doc did_document, String publicKey , String privateKey) {
 		super();
 		this.did_key = did_key;
 		this.did_web = did_web;
 		this.did_document = did_document;
+		this.publicKey = publicKey;
+		this.privateKey = privateKey;
 	}
 
 	public String getDid_key() {
@@ -50,6 +58,14 @@ public class FinalResponse implements Serializable{
 
 	public String getDid_web() {
 		return did_web;
+	}
+	
+	public String setPublicKey(String publicKey) {
+		return this.publicKey =  publicKey;
+	}
+	
+	public String setPrivateKey(String privateKey) {
+		return this.privateKey =  privateKey;
 	}
 
 	public void setDid_web(String did_web) {
